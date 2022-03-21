@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"
+    />
+    <title></title>
+    <link rel="icon" href="/src/assets/index/favicon.png" />
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <style>
+    body,
+    html {
+      background-color: #f7f9fc;
+      width: 100%;
+      font-size: 62.5%;
+      height: 100%;
+    }
+  </style>
+
+  <body>
+    <div id="app"></div>
+
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    //判断手机横竖屏状态：
+
+    window.addEventListener(
+      "onorientationchange" in window ? "orientationchange" : "resize",
+      function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+          // alert("竖屏状态！");
+          history.go(0);
+        }
+
+        if (window.orientation === 90 || window.orientation === -90) {
+          // alert("横屏状态！");
+          history.go(0);
+        }
+      },
+      false
+    );
+  </script>
+</html>

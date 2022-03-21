@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "env"
+    ],
+    "plugins": [
+        [
+            "transform-object-rest-spread", //支持iviewui中的扩展运算符
+            "import",
+            {
+                "libraryName": "iview",
+                "libraryDirectory": "src/components"
+            }
+        ]
+    ]
+}
